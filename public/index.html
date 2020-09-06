@@ -25,6 +25,10 @@
             +'</strong>: '+ message.message +'</div>')
     }
 
+    socket.on('receivedMessage', function(message) {
+        renderMessage(message)
+    });
+
     $('#chat').submit(function(event) {
         event.preventDefault();
 
